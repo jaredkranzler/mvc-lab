@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css"></head>
+<body>
+  <h1>Potions</h1>
+
+  <h3>Potion Name: <%= potion.name %></h3>
+ 
+  <h4>Potion Effect: <%= potion.effect %></h4>
+
+  <% if(potion.available === true) { %>
+    <span>Available</span>
+  <% } else { %>
+    <span>Out of Stock</span>
+  <% } %>
+
+  <h5><a href="http://localhost:3000/potions/">back to Potion Inventory </a></h5>
+</body>
+</html>

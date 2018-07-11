@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css"></head>
+<body>
+  <h1>Adjust Potion Inventory Page</h1>
+
+  <form method="POST" action="/potions/<%=index%>?_method=PUT">
+    Name: <input type="text" name="name" value="<%= potion.name%>">
+    Effect: <input type="text" name="color" value="<%=potion.effect%>">
+    unavailable: <input type="checkbox" name="available"
+
+    <% if(potion.available !== true) { %>
+      checked
+    <% } %>
+    >
+    <br/>
+    <input type="submit" name="submit changes"/>
+  </form>
+
+
+</body>
+</html>

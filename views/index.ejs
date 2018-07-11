@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+  <h1>Slug & Jiggers</h1>
+  <h2>Apothicary</h2>
+
+  <ul>
+      <% for (let i = 0; i < potions.length; i++) { %>
+          <li>
+            <a href="http://localhost:3000/potions/<%= i %>"><%= potions[i].name %></a>
+            <form action="/potions/<%=i%>?_method=DELETE" method="POST" >
+              <button type="submit">Remove Potion</button>     
+  
+            </form>
+            <a href="/potions/<%=i%>/edit">Edit</a>
+          </li>
+      <% } %>
+  </ul>
+
+</body>
+</html>
