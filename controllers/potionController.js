@@ -1,8 +1,6 @@
 const express = require('express');
 const router =  express.Router();
-
 const Potions = require('../models/potions')
-
 
 //edit route to show edit of potion
 router.get('/:index/edit', (req, res) => {
