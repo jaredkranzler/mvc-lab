@@ -22,13 +22,13 @@ router.get('/', (req, res) => {
 // add potion to index.ejs
 router.post('/', (req, res) => {
 
-  newPotion = {
+ const newPotion = {
     name: req.body.name,
     effect: req.body.effect,
     available: true,
     delete: 'off'
   };
-  if (req.body.available !== 'on'){
+  if (req.body.available === 'on'){
     req.body.available = true
   }
 
@@ -65,7 +65,7 @@ router.delete('/:index', (req, res) => {
 
 router.put('/:index', (req, res) => {
   
-  if(req.body.available !== 'on' ){
+  if(req.body.available === 'on' ){
     req.body.available = true;
   }else {
     req.body.available = false;

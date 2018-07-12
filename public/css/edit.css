@@ -43,7 +43,6 @@
 @keyframes Gradient {
     0% {
         background-position: 0% 50%
-        opacity: ;
     }
     50% {
         background-position: 100% 50%
@@ -56,7 +55,7 @@
 body {
   position: relative;
   font-family: fantasy;
-  background:
+  background: 
   linear-gradient( rgba(207, 66, 255,0.6),
     rgba(88, 77, 242,0.8)
   ),

@@ -11,10 +11,11 @@
 
   <form method="POST" action="/potions/<%=index%>?_method=PUT">
     Name: <input type="text" name="name" value="<%= potion.name%>">
-    Effect: <input type="text" name="color" value="<%=potion.effect%>">
-    unavailable: <input type="checkbox" name="available"
+    Effect: <input type="text" name="effect" value="<%=potion.effect%>">
+    
+     Available: <input type="checkbox" name="available"
 
-    <% if(potion.available !== true) { %>
+    <% if(potion.available === true) { %>
       checked
     <% } %>
     >
